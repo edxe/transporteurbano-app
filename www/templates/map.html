@@ -1,0 +1,46 @@
+<ion-view>
+  <ion-content data-tap-disabled="true" scroll="false">
+
+    <div class="row row-no-padding"
+         style="position: absolute;top:0;z-index: 1000;height: 80px ">
+      <div class="col col-75" style="height: 100%;">
+        <div class="card" style="margin-right: 0;border-radius: 0">
+          <div class="item item-text-wrap">
+            Hola, Cual es su destino el día de hoy?
+          </div>
+        </div>
+      </div>
+      <div class="col">
+
+        <div class="card" style="height: 100%;margin-left: 0;border-radius: 0">
+          <div class="item item-text-wrap">
+            <p>
+              <button ng-click="openModal($event)">Ver Destinos</button>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card"
+         style="position: absolute;bottom: 30%;z-index: 1000; ">
+      <div class="item item-text-wrap">
+        This is a basic Card which contains an item that has wrapping text.
+      </div>
+    </div>
+    <leaflet id="map" center="center" zoomcontrol="false"></leaflet>
+  </ion-content>
+</ion-view>
+
+
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">My Modal title</h1>
+    </ion-header-bar>
+    <ion-content>
+      Hello!
+    </ion-content>
+  </ion-modal-view>
+</script>

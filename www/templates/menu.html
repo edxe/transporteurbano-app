@@ -1,14 +1,40 @@
 <ion-side-menus enable-menu-with-back-views="false">
-  <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
+  <ion-side-menu-content >
+    <!--<ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
       </ion-nav-back-button>
 
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
+
       </ion-nav-buttons>
-    </ion-nav-bar>
+    </ion-nav-bar>-->
+    <!--<div class="bar bar-header">-->
+    <div class="row " style="border: 1px solid red;">
+      <div class="col">
+        <div class="fa fa-bars" burger-menu menu-toggle="left"></div>
+      </div>
+    </div>
+    <div class="row row-center" style="border: 1px solid red;margin-top: 10px">
+      <div class="col text-center">
+        <h1>Transport Urbano</h1>
+      </div>
+    </div>
+    <div class="row row-bottom row-no-padding" style="min-height: 100px;border:1px solid green;">
+      <div class="col ">
+        <div style="border:1px solid blue;">
+          <button class="button button-clear button-positive button-nav-bar"
+                  ui-sref="app.map">
+            <i class="fa fa-map-o" aria-hidden="true"></i>&nbsp;Map
+          </button>
+          <button class="button button-clear button-positive button-nav-bar"
+                  ui-sref="app.routes">
+            <i class="fa fa-map-signs" aria-hidden="true"></i>&nbsp;Routes
+          </button>
+        </div>
+      </div>
+    </div>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
@@ -18,16 +44,16 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
+        <ion-item menu-close ng-click="login()"  ui-sref-active="active">
           Login
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item menu-close href="#/app/routes">
+          Rutas
         </ion-item>
         <ion-item menu-close href="#/app/browse">
           Browse
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
+        <ion-item menu-close href="#/app/map">
           Playlists
         </ion-item>
       </ion-list>
